@@ -90,7 +90,7 @@ frontend/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/<your-username>/deep-researcher-agentic-ai-app.git
+git clone https://github.com/abhinav-02/deep-researcher-agentic-ai-app.git
 
 cd deep-researcher-agentic-ai-app
 ```
