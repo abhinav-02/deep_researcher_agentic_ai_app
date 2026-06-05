@@ -1,0 +1,6 @@
+#!/Users/abhi/Abhi_code/deep_researcher_agentic_ai_app/venv/bin/python3.12
+import sys
+from idna.cli import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())
