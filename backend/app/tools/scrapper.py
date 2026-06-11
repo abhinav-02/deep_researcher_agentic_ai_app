@@ -1,15 +1,15 @@
-import requests
-from bs4 import BeautifulSoup
+import trafilatura
 
 def scrape_url(url):
-    html = requests.get(
-        url,
-        timeout=15,
-        headers={
-            "User-Agent":"Mozilla/5.0"
-        }
-    ).text
+    try:
+        downloaded = trafilatura.fetch_url(url)
 
-    soup = BeautifulSoup(html,"html.parser")
+        if not downloaded:
+            return ""
 
-    return soup.get_text(" ", strip=True)[:12000]
+        text = trafilatura.extract(downloaded)
+
+        return text or ""
+
+    except Exception:
+        return ""
